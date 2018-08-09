@@ -1,0 +1,90 @@
+*
+
+/* Universal CSS Rules */
+
+html {
+  font-size: 18px;
+  font-family: Helvetica, sans-serif;
+  background-color: white;
+}
+
+body {
+  line-height: 1.4;
+  margin: 0;
+  max-width: 2880px;
+}
+
+.container {
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+/* Navigation Bar */
+
+header {
+  display: flex;
+  height: 24px;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding-top: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding-left: 24px;
+}
+
+.logo span {
+  color: #5C80BC;
+  font-size: 32px;
+}
+
+.logo .academy {
+  color: #141B41;
+}
+
+nav {
+  display: inline-flex;
+  justify-content: flex-end;
+  padding-right: 24px;
+}
+
+nav span {
+  display: inline-block;
+  padding: 20px 16px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #5C80BC;
+  font-size: 26px;
+}
+
+nav a:hover {
+  color: #141B41;
+}
+
+.mobile-header {
+  display: none;
+}
+
+@media only screen and (max-width: 560px) {
+.logo {display: none;}
+nav {display: none;}
+.mobile-header {display: flex; width: 100%; justify-content: space-around;}
+.mobile-header img {height: 60px; width: 45px;}
+}
