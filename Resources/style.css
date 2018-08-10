@@ -12,22 +12,34 @@ body {
   line-height: 1.4;
   margin: 0;
   max-width: 2880px;
+  padding: 1.25rem 1rem;
 }
 
 .container {
-  margin: auto;
+  width: 100%;
 }
 
 .flex {
   display: flex;
 }
 
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
 h2 {
   font-size: 2.2rem;
+
+}
+
+h3 {
+  font-size: 2rem;
+  font-style: italic;
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
 }
 
 /* Navigation Bar */
@@ -38,14 +50,13 @@ header {
   align-items: center;
   width: 100%;
   background-color: white;
-  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
   flex-grow: 1;
-  padding-left: 24px;
 }
 
 .logo span {
@@ -60,7 +71,7 @@ header {
 nav {
   display: inline-flex;
   justify-content: flex-end;
-  padding-right: 24px;
+
 }
 
 nav span {
@@ -87,4 +98,151 @@ nav a:hover {
 nav {display: none;}
 .mobile-header {display: flex; width: 100%; justify-content: space-around;}
 .mobile-header img {height: 60px; width: 45px;}
+}
+
+/* Main Banner */
+
+.main-banner {
+  justify-content: space-between;
+  background-color: #141B41;
+  color: white;
+}
+
+.banner-image {
+  width: 55%;
+  padding-right: 5%;
+}
+
+.banner-image img {
+  width: 100%;
+  height: auto;
+}
+
+.banner-text {
+  width: 40%;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-right: 5rem;
+  padding-bottom: 8rem;
+}
+
+.banner-text h1 {
+  color: white;
+}
+
+.button {
+  background-color: white;
+  width: 85%;
+  height: 15%;
+  justify-content: center;
+  align-items: center;
+}
+
+.button a {
+  color: #141B41;
+  text-decoration: none;
+  font-size: 1.75rem;
+}
+
+.button a:hover {
+  color: #5C80BC;
+}
+
+@media only screen and (max-width: 950px) {
+  .main-banner {
+    flex-flow: column;
+  }
+
+  .banner-image {
+    width: 100%;
+  }
+
+  .banner-text {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+/* Practicing Section */
+
+.practice {
+  justify-content: space-between;
+  padding-top: 2rem;
+  background-color: white;
+  color: #141B41;
+}
+
+.practice p {
+  color: #5C80BC;
+}
+
+
+.practice a {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.practice-left {
+  width: 52.5%;
+  flex-flow: column;
+}
+
+.practice-image {
+}
+
+.practice-image img{
+  width: 100%;
+}
+
+.practice-left-text {
+  flex-flow: column;
+}
+
+.quote-source {
+  font-size: 1rem;
+}
+
+.practice-right {
+  width: 42.5%;
+  justify-content: flex-start;
+  margin-top: -1rem;
+}
+
+.img-container {
+  width: 35%;
+  padding: 1rem 2rem 1rem 0;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+}
+
+
+.practice-right .description {
+  flex-flow: column;
+  justify-content: space-around;
+  width: 65%;
+  padding: 0.5rem 0 2rem 0;
+}
+
+@media only screen and (max-width: 950px) {
+  .practice-left {
+    display: none;
+  }
+  .practice-right {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .info {
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
 }
