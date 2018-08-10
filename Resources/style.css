@@ -10,13 +10,14 @@ html {
 
 body {
   line-height: 1.4;
-  margin: 0;
-  max-width: 2880px;
+  margin: 0 auto;
+  max-width: 2000px;
   padding: 1.25rem 1rem;
 }
 
 .container {
-  width: 100%;
+  max-width: 2000px;
+  margin: auto;
 }
 
 .flex {
@@ -26,20 +27,31 @@ body {
 h1 {
   font-size: 4rem;
   font-weight: bold;
+  font-family: "Merriweather", sans-serif;
 }
 
 h2 {
   font-size: 2.2rem;
-
+  font-family: "Montserrat", sans-serif;
 }
 
 h3 {
   font-size: 2rem;
   font-style: italic;
+  font-family: "Montserrat", sans-serif;
 }
 
 p {
   font-size: 1.7rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  font-family: "Montserrat", sans-serif;
+}
+
+span {
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Navigation Bar */
@@ -123,8 +135,7 @@ nav {display: none;}
   flex-flow: column;
   justify-content: space-around;
   align-items: flex-start;
-  padding-right: 5rem;
-  padding-bottom: 8rem;
+  padding: 4rem 5rem 8rem 0;
 }
 
 .banner-text h1 {
@@ -211,6 +222,14 @@ nav {display: none;}
   margin-top: -1rem;
 }
 
+.info {
+  padding-bottom: 7rem;
+}
+
+.mobile-image {
+  display: none;
+}
+
 .img-container {
   width: 35%;
   padding: 1rem 2rem 1rem 0;
@@ -243,6 +262,78 @@ nav {display: none;}
     align-items: center;
     justify-content: center;
   }
+  .mobile-image {
+    display: flex;
+    max-width: 950px;
+  }
+
+  .mobile-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .practice-right .img-container {
+    display: none;
+  }
 
 
+}
+
+
+/* Learning Section */
+
+.learning {
+  padding: 1rem 4rem;
+  background-color: #141B41;
+  color: white;
+  max-width: 2000px;
+  margin: auto;
+}
+
+.learning img {
+
+  height: auto;
+}
+
+.description {
+  justify-content: center;
+  align-items: center;
+}
+
+.top-row {
+  padding-bottom: 2rem;
+}
+
+.item {
+  flex-flow: column;
+  padding-right: 2rem;
+}
+
+.course {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #5C80BC;
+}
+
+.mobile-learning {
+  display: none;
+}
+
+@media only screen and (max-width: 950px) {
+
+  .learning {
+    display: none
+  }
+
+  .mobile-learning {
+    display: flex;
+    flex-flow: column;
+    background-color: #141B41;
+  }
+
+  .tab {
+    background-color: #5C80BC;
+    color: white;
+    justify-content: center;
+  }
 }
