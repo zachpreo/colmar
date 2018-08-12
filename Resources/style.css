@@ -58,11 +58,13 @@ span {
 
 header {
   display: flex;
-  height: 24px;
+  height: 2.3rem;;
   align-items: center;
   width: 100%;
   background-color: white;
   padding-bottom: 1rem;
+  position: fixed;
+  top: 0;
 }
 
 .logo {
@@ -83,7 +85,7 @@ header {
 nav {
   display: inline-flex;
   justify-content: flex-end;
-
+  padding-right: 1.6rem;
 }
 
 nav span {
@@ -105,11 +107,11 @@ nav a:hover {
   display: none;
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 1024px) {
 .logo {display: none;}
 nav {display: none;}
 .mobile-header {display: flex; width: 100%; justify-content: space-around;}
-.mobile-header img {height: 60px; width: 45px;}
+.mobile-header img {max-height: 2.5rem; width: 45px; padding-top: 1rem;}
 }
 
 /* Main Banner */
@@ -148,19 +150,21 @@ nav {display: none;}
   height: 15%;
   justify-content: center;
   align-items: center;
+  margin-left: 0;
 }
 
 .button a {
   color: #141B41;
   text-decoration: none;
   font-size: 1.75rem;
+  font-weight: bold;
 }
 
 .button a:hover {
   color: #5C80BC;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1024px) {
   .main-banner {
     flex-flow: column;
   }
@@ -170,9 +174,14 @@ nav {display: none;}
   }
 
   .banner-text {
-    width: 100%;
+    width: 90%;
+    margin-left: 3.5rem;
     justify-content: center;
     align-items: center;
+  }
+
+  .button {
+    margin-left: 0;
   }
 
 }
@@ -248,7 +257,12 @@ nav {display: none;}
   padding: 0.5rem 0 2rem 0;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1024px) {
+
+  .practice {
+    align-items: center;
+  }
+
   .practice-left {
     display: none;
   }
@@ -262,6 +276,11 @@ nav {display: none;}
     align-items: center;
     justify-content: center;
   }
+
+  .description-text {
+    justify-content: flex-start
+  }
+
   .mobile-image {
     display: flex;
     max-width: 950px;
@@ -286,13 +305,13 @@ nav {display: none;}
   padding: 1rem 4rem;
   background-color: #141B41;
   color: white;
-  max-width: 2000px;
+  flex-flow: column;
+  max-width: 100%;
   margin: auto;
 }
 
 .learning img {
 
-  height: auto;
 }
 
 .description {
@@ -307,6 +326,8 @@ nav {display: none;}
 .item {
   flex-flow: column;
   padding-right: 2rem;
+  min-width: 0;
+  max-width: 532px;
 }
 
 .course {
@@ -319,7 +340,7 @@ nav {display: none;}
   display: none;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1024px) {
 
   .learning {
     display: none
@@ -328,12 +349,140 @@ nav {display: none;}
   .mobile-learning {
     display: flex;
     flex-flow: column;
-    background-color: #141B41;
+    background-color: white;
   }
 
   .tab {
-    background-color: #5C80BC;
+    background-color: #141B41;
+    color: #5C80BC;
+    justify-content: center;
+    margin: 1.2rem 0;
+  }
+
+  .tab a {
+    margin: 1.2rem 0;
+    text-decoration: none;
     color: white;
+    font-size: 1.5rem;
+  }
+
+  .tab a:hover {
+    color: #5C80BC;
+  }
+}
+
+/* Thesis Section */
+
+.thesis-description {
+  justify-content: center;
+  align-items: center;
+  color: #5C80BC;
+}
+
+.thesis {
+  justify-content: space-between;
+  padding-top: 2rem;
+  background-color: white;
+  color: #141B41;
+}
+
+.thesis p {
+  color: #5C80BC;
+}
+
+
+.thesis-left {
+  width: 52.5%;
+  flex-flow: column;
+}
+
+
+.thesis-video video{
+  width: 100%;
+  min-height: 0;
+}
+
+.thesis-left-text {
+  flex-flow: column;
+}
+
+
+.thesis-right {
+  width: 42.5%;
+  justify-content: flex-start;
+  margin-top: -1rem;
+}
+
+.info {
+  padding-bottom: 7rem;
+}
+
+
+.img-container {
+  width: 35%;
+  padding: 1rem 2rem 1rem 0;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+}
+
+
+.thesis-right .description {
+  flex-flow: column;
+  justify-content: space-around;
+  width: 65%;
+  padding: 0.5rem 0 2rem 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .thesis-right {
+    display: none;
+  }
+  .thesis-left {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .info {
+    flex-flow: column;
+    align-items: center;
     justify-content: center;
   }
+
+
+}
+
+/* Footer */
+
+footer {
+  justify-content: space-between;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+footer a {
+  padding-right: 3rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #5C80BC;
+}
+
+footer a:hover {
+  color: #141B41;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  footer {
+    justify-content: center;
+  }
+
+  .footer-right {
+    display: none;
+  }
+
 }
